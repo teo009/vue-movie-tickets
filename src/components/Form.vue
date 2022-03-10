@@ -45,18 +45,31 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-  h3 {
-    margin: 40px 0 0;
+  @import "../styles/_variables.scss";
+  form {
+    background: $bg;
+    border: 1px solid $color;
+    margin: 0 50px 25px;
+    padding: 15px 25px 25px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    transform: scale(1);
+    transition: .3s transform;
   }
-  ul {
-    list-style-type: none;
-    padding: 0;
+  form:hover {
+    transform: scale(1.06);
   }
-  li {
-    display: inline-block;
-    margin: 0 10px;
+  button {
+    padding: 5px 10px;
+    background: $button-color;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: border-color 0.15;
   }
-  a {
-    color: #42b983;
+  button:hover {
+    border-color: $button-color;
+  }
+  button[disabled] {
+    opacity: 0.6;
   }
 </style>
